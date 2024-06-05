@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> il regolamento </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-wrap: nowrap;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .menu-icon {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            z-index: 2; /* Ensure the menu icon is on top */
+        }
+        .navbar {
+            height: 100%;
+            width: 0; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s; /* Smooth transition */
+            padding-top: 60px;
+        }
+        .navbar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            text-decoration: underline;
+            text-decoration-color: rgb(102, 226, 102); /* Dark green underline */
+        }
+        .content {
+            padding: 15px;
+            display: flex;
+            flex-direction: row; /* Arrange items in a row */
+            justify-content:space-evenly; /* Add space between the texts and images */
+            align-items: center; /* Align items to the top */
+            height: 90vh; /* Set height to fill the viewport vertically */
+        }
+        .texts {
+            width: 60%; /* Adjust width as needed */
+        }
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center images horizontally */
+            width: 30%; /* Adjust width as needed */
+        }
+        .images img {
+            width: 100%; /* Make images responsive */
+            max-width: 300px; /* Set max width for images */
+            margin: 10px; /* Add some space between images */
+            border: solid 2px green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>le 3 fasi fondamentali</h1>
+        <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div> <!-- Menu icon (three lines) -->
+    </header>
+    <div id="navbar" class="navbar">
+        <a href="capolavoro.html">La mia esperienza</a>
+        <a href="La gara.html">La gara</a>
+    </div>
+    <div id="content" class="content">
+        <div class="texts">
+            <section>   
+                <h1>info generali</h1>
+                <p>I punti nel fighting system sono di due tipi, l' Ippon e il wazari (ippon 2 punti, wazari 1 punto),in base alle fasi del combattimento si valuta 
+                l'esecuzione della tecnica o colpo eseguita, e l'arbitro che osserva attentamente l'incontro, valuta cosa segnare.
+                tra i due atleti è suddiviso in categoria di peso ed età, che variano in base al sesso; i due avversari indossano dei guantini 
+                da 6oz e dei paratibia, il primo di colore rosso ed il secondo blu, dall' U18 in su è anche obbligatorio il parandenti e il groin guard.
+                se uno dei due combattenti riesce ad effettuare un ippon in tutte e tre le fasi vincerà per full ippon, altrimenti il vincitore viene deciso dai giudici che segnano i punti
+                dopo due ingaggi in prima fase, si puo passare in seconda fase, dove si tenta di proiettare l'avversario madiante tecniche di judo, fino ad arrivare alla lotta a terra, in cui
+                si lotta per la sottomissione dell'avverario tramite leva o strangolamento o immobilizzazione per 15 secondi dell'avversario.
+                Le possibili penalità sono due: chui, ossia un colpo scorretto o passante, che aggiudica 3 punti all'avversario e segna 3 punti di penalità, e lo shido, che aggiudica 1 punto all'avversario
+                e 1 punto di penalità; se si superano le 5 penalità, alla sesta, il combattente perde per hansokoumake, ossia la squalifica.</p>
+            </section>
+            <section class>
+                <h1>prima fase</h1>
+                <p>La prima fase consiste nello striking, ossia la transizione di colpi verso l' avversario, affinchè lo raggiungano segnando dei punti, se il colpo arriva prima dell'avverario, ed è pulito
+                    l'arbitro segnerà l'ippon in prima fase al fighter, il colpo non puo superare il baricentro dell'avversario, quindi se un calcio supera la metà del corpo, viene assegnato un chui, oppure
+                    quando viene portato un colpo mentre si viene presi, viene assegnato uno shido, perche si è precendetemente entrati in 2 fase.
+                </p>
+            </section>
+            <section>
+                <h1>seconda fase</h1>
+                <p>Una volta arrivati in seconda fase, l'obbiettivo è la proiezione dell' avverario attraverso una qualsiasi tecnica di judo, difatti si possono prendere le gambe, sollevare da terra, usare tecniche di sacrificio
+                    i casi di ippon, sono solo quando la proiezione dell'avverario avviene sulla sua schiena, in caso l'avversario cada laterale o qualsiasi altro caso verrà segnato wazari
+                </p>
+            </section>
+            <section>
+                <h1>terza fase</h1>
+                <p>Infine la terza fase o anche ne waza, dove il conteggio dei punti avviene solo dopo immobilizzazione dell'avversario, asegnando ippon dopo 15 secondi, o dopo sottomissione segnando invece 3 punti.
+                    alcune sottomissioni non sono valide, e rischiano di causare hansoukoumake diretto per il combattente che la esegue, squalificandolo.
+                </p>
+            </section>
+        </div>
+        <div class="images">
+            <img src="striking.webp" alt="">
+            <img src="2 fase.jpg" alt="">
+            <img src="3 fase.webp" alt="">
+        </div>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            var content = document.getElementById("content");
+            if (navbar.style.width === "200px") {
+                navbar.style.width = "0";
+                content.classList.remove("shifted");
+            } else {
+                navbar.style.width = "200px";
+                content.classList.add("shifted");
+            }
+        }
+    </script>
+</body>
+</html>

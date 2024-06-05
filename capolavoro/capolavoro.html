@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> la mia esperienza </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-wrap: nowrap;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+        .menu-icon {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            z-index: 2; /* Ensure the menu icon is on top */
+        }
+        .navbar {
+            height: 100%;
+            width: 0; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s; /* Smooth transition */
+            padding-top: 60px;
+        }
+        .navbar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            text-decoration: underline;
+            text-decoration-color: rgb(102, 226, 102); /* Dark green underline */
+        }
+        .content {
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh; /* Set height to fill the viewport vertically */
+        }
+        .content h1 {
+            color: green; /* Set the text color to green */
+        }
+        .content p {
+            width: 60%; /* Reduced paragraph width */
+            margin: 0 auto; /* Center paragraph within its container */
+        }
+        .content img {
+            width: 400px; /* Set image width */
+            margin: 10px; /* Add some space between images */
+            border: solid 2px green ;
+        }
+        .content img:first-child {
+            margin-left: 0; /* Remove margin from the first image */
+        }
+        .immagini {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Campionato Europeo Ju jitsu</h1>
+        <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div> <!-- Menu icon (three lines) -->
+    </header>
+    <div id="navbar" class="navbar">
+        <a href="il regolamento.html">Il regolamento</a>
+        <a href="La gara.html">La gara</a>
+    </div>
+    <div id="content" class="content">
+        <h1 style="color: green;">La mia esperienza</h1> <!-- Set the text color inline -->
+        <!-- Page content goes here -->
+        <p>Durante il 2024, ho avuto l'occasione di partecipare ad un evento che sognavo sin da piccolo, un campionato europeo;
+            pratico il Ju jitsu fight system, uno stile di combattimento che unisce arti marziali come karate, judo, brazilian 
+            ju jitsu... e molte altre discipline. Nonostante il viaggio faticoso e adrenalinico, sono riuscito ad ottenere un 
+            5 posto su 34 atleti, battendo anche campioni e forti atleti, nella categoria -69kg U18, categoria che ha sempre 
+            avuto una forte competizione e sorprese nel corso degli anni.
+            La mancata medaglia mi ha distrutto inizialmente, ma mi ha aiutato a maturare ed evolvere il mio stile di combattimento 
+            durante gli incontri, cosi da sapere dove lavorare per migliorare sempre di piu, e prepararmi per le prossime gare.
+        </p>
+        <div class="immagini">
+            <img src="97af6c2bde.jpg" alt="Image 1"> <!-- First image -->
+            <img src="Combat-jujitsu-traditionnel-superbe-coup-de-pied-.jpg" alt="Image 2"> <!-- Second image -->
+        </div>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            var content = document.getElementById("content");
+            if (navbar.style.width === "200px") {
+                navbar.style.width = "0";
+                content.classList.remove("shifted");
+            } else {
+                navbar.style.width = "200px";
+                content.classList.add("shifted");
+            }
+        }
+    </script>
+</body>
+</html>
